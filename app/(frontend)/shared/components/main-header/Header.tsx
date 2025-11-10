@@ -11,10 +11,13 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-import Cart from "@/app/(frontend)/cart/page";
+
+"use client";
+
 import Navbar from "@/app/(frontend)/shared/components/main-header/Navbar";
 import Search from "@/app/(frontend)/shared/components/main-header/Search";
 import Login from "@/features/auth/components/Login/page";
+import CartIcon from "@/features/cart/components/CartIcon";
 
 export default function Header() {
   return (
@@ -22,10 +25,12 @@ export default function Header() {
       <div className="">
         <div className="flex items-center justify-center gap-4 mx-auto px-8 py-4 space-x-60">
           <Search />
+
+
           <Login />
         </div>
         <div className="">
-          <Cart />
+          <CartIcon />
         </div>
       </div>
 
