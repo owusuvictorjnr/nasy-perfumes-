@@ -13,6 +13,17 @@
 // limitations under the License.
 
 "use client";
+
+import { Hero } from "@/app/(frontend)/shared/components/Hero";
+
+
 export default function Homepage() {
-  return <div className="text-center h-screen w-full">Welcome to Nasy Perfumes</div>;
+  return (
+    <div className="text-center h-screen w-full">
+      {/* Hero Carousel */}
+      <div className="">
+        <Hero />
+      </div>
+    </div>
+  );
 }
