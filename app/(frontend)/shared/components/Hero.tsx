@@ -43,7 +43,7 @@ export function Hero() {
         <CarouselContent>
           {images.map((src, index) => (
             <CarouselItem key={index}>
-              <div className="relative w-full md:h-280 h-100  overflow-hidden rounded-none md:rounded-xl">
+              <div className="relative w-full md:h-280 h-100  overflow-hidden rounded-none md:rounded">
                 <Image
                   src={src}
                   alt={`Perfume ${index + 1}`}
