@@ -11,10 +11,16 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-import React from 'react'
+import { Separator } from "@/components/ui/separator";
+import React from "react";
 
 export default function Footer() {
   return (
-    <div>Footer</div>
-  )
+    <div className="bg-[#ccd5ae] border-t border-[#eeeeee] min-h-32 w-full ease-in-out ">
+      <div className="text-center mt-20">
+        <Separator />
+        &copy; 2025 Vitech. All rights reserved.
+      </div>
+    </div>
+  );
 }
