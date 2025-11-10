@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Bai_Jamjuree, Poppins, Roboto } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/app/(frontend)/shared/components/main-header/Header";
 import Footer from "@/app/(frontend)/shared/components/Footer";
+import { SessionProvider } from "next-auth/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 // TWKEverett Local Font Configuration
 const twkEverett = localFont({
@@ -139,6 +140,8 @@ export const metadata: Metadata = {
     "Discover the finest perfumes at Nasy Perfumes.",
 };
 
+const queryClient = new QueryClient();
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -149,9 +152,13 @@ export default function RootLayout({
       <body
         className={`${baiJamjuree.variable} ${twkEverett.variable} ${poppins.variable} ${roboto.variable}`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <SessionProvider>
+          <QueryClientProvider client={queryClient}>
+            <Header />
+            {children}
+            <Footer />
+          </QueryClientProvider>
+        </SessionProvider>
       </body>
     </html>
   );
