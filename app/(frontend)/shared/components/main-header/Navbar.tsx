@@ -12,19 +12,40 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import Link from "next/link";
+
 export default function Navbar() {
   return (
     <div className="hidden md:block">
       <nav className="">
         <ul className="flex space-x-8 justify-center items-center py-2 uppercase font-medium">
-          <li className="hover:text-blue-400 cursor-pointer">fine fragrances</li>
-          <li className="hover:text-blue-400 cursor-pointer">body-hair-face</li>
-          <li className="hover:text-blue-400 cursor-pointer">grooming</li>
-          <li className="hover:text-blue-400 cursor-pointer">home creations</li>
-          <li className="hover:text-blue-400 cursor-pointer">gift</li>
-          <li className="hover:text-blue-400 cursor-pointer">sampless</li>
-          <li className="hover:text-blue-400 cursor-pointer">About Us</li>
-          <li className="hover:text-blue-400 cursor-pointer">Contact</li>
+          <Link href={"/"}>
+            <li className="hover:text-blue-400">home</li>
+          </Link>
+          <Link href={"/fine-fragrances"}>
+            <li className="hover:text-blue-400">fine fragrances</li>
+          </Link>
+          <Link href={"/body-hair-face"}>
+            <li className="hover:text-blue-400">body-hair-face</li>
+          </Link>
+          <Link href={"/grooming"}>
+            <li className="hover:text-blue-400">grooming</li>
+          </Link>
+          <Link href={"/home-creations"}>
+            <li className="hover:text-blue-400">home creations</li>
+          </Link>
+          <Link href={"/gifts"}>
+            <li className="hover:text-blue-400">gift</li>
+          </Link>
+          <Link href={"/samples"}>
+            <li className="hover:text-blue-400">samples</li>
+          </Link>
+          <Link href={"/about-us"}>
+            <li className="hover:text-blue-400">About Us</li>
+          </Link>
+          <Link href={"/contact-us"}>
+            <li className="hover:text-blue-400">Contact</li>
+          </Link>
         </ul>
       </nav>
     </div>
