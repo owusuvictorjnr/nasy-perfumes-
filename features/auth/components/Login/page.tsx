@@ -11,14 +11,22 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
-import React from "react";
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Login() {
+  const { data: session, status } = useSession();
+
+  if (status === "loading") return <p>Loading...</p>;
   return (
-    <Avatar className="h-10 w-10 hidden md:block">
-      <AvatarImage src="https://github.com/shadcn.png"  className="rounded-full"/>
-      <AvatarFallback>CN</AvatarFallback>
-    </Avatar>
+    <div className="">
+      {session ? (
+        <Button onClick={() => signOut}>Logout</Button>
+      ) : (
+        <Button onClick={() => signIn("google")}>Log</Button>
+      )}
+    </div>
   );
 }
