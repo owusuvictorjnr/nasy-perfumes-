@@ -4,8 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/app/(frontend)/shared/components/main-header/Header";
 import Footer from "@/app/(frontend)/shared/components/Footer";
-import { SessionProvider } from "next-auth/react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Provider from "@/components/providers/Provider";
 
 // TWKEverett Local Font Configuration
 const twkEverett = localFont({
@@ -140,8 +139,6 @@ export const metadata: Metadata = {
     "Discover the finest perfumes at Nasy Perfumes.",
 };
 
-const queryClient = new QueryClient();
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -152,13 +149,11 @@ export default function RootLayout({
       <body
         className={`${baiJamjuree.variable} ${twkEverett.variable} ${poppins.variable} ${roboto.variable}`}
       >
-        <SessionProvider>
-          <QueryClientProvider client={queryClient}>
-            <Header />
-            {children}
-            <Footer />
-          </QueryClientProvider>
-        </SessionProvider>
+        <Provider>
+          <Header />
+          {children}
+          <Footer />
+        </Provider>
       </body>
     </html>
   );
