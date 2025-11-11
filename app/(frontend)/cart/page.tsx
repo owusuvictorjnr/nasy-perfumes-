@@ -11,19 +11,25 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-import { SHOPPING_BAG_ICON } from "@/constant/assets";
-import Image from "next/image";
+// import { SHOPPING_BAG_ICON } from "@/constant/assets";
+// import Image from "next/image";
 
-export default function Cart() {
-  return (
-    <div className="flex justify-end items-center px-8 pb-2">
-      <Image
-        src={SHOPPING_BAG_ICON}
-        alt="cart icon"
-        width={30}
-        height={30}
-        
-      />
-    </div>
-  );
+// export default function Cart() {
+//   return (
+//     <div className="flex justify-end items-center px-8 pb-2">
+      // <Image
+      //   src={SHOPPING_BAG_ICON}
+      //   alt="cart icon"
+      //   width={30}
+      //   height={30}
+
+      // />
+//     </div>
+//   );
+// }
+
+import React from "react";
+
+export default function page() {
+  return <div>page</div>;
 }
