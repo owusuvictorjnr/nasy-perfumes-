@@ -25,11 +25,9 @@ export default function Header() {
       <div className="">
         <div className="flex items-center justify-center gap-4 mx-auto px-8 py-4 space-x-60">
           <Search />
-
-
-          <Login />
         </div>
-        <div className="">
+        <div className="flex justify-end items-center px-8 pb-2 space-x-4 -order-1">
+          <Login />
           <CartIcon />
         </div>
       </div>
