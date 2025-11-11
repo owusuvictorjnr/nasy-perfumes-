@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -21,11 +22,11 @@ export default function Login() {
 
   if (status === "loading") return <p>Loading...</p>;
   return (
-    <div className="">
+    <div className="font-medium flex justify-end items-center px-8 pb-2">
       {session ? (
         <Button onClick={() => signOut}>Logout</Button>
       ) : (
-        <Button onClick={() => signIn("google")}>Log</Button>
+        <Button onClick={() => signIn("google")}>Login</Button>
       )}
     </div>
   );
