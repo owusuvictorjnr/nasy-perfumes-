@@ -16,9 +16,7 @@
 "use client";
 
 import { Input } from "@/components/ui/input";
-import { SEARCH_ICON } from "@/constant/assets";
 import { useSearchProducts } from "@/features/products/hooks/queries/useSearchProducts";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Search() {
