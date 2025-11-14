@@ -27,6 +27,7 @@ import {
   IMG27,
   IMG10,
   IMG3,
+  IMG5,
 } from "@/constant/assets";
 
 // small helpers to keep seed data clear and robust
@@ -337,7 +338,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: true,
     isPublished: true,
-    images: [IMG1, IMG26],
+    images: [IMG1, IMG26, IMG2, IMG3, IMG4],
     tags: ["floral", "sweet", "romantic"],
     sizes: [],
     colors: [],
@@ -369,7 +370,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: true,
     isPublished: true,
-    images: [IMG6, IMG26],
+    images: [IMG6, IMG26, IMG2, IMG3, IMG4],
     tags: ["floral", "sweet", "romantic"],
     sizes: [],
     colors: [],
@@ -401,7 +402,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: true,
     isPublished: true,
-    images: [IMG3, IMG4],
+    images: [IMG3, IMG4, IMG12, IMG16, IMG26],
     tags: ["floral", "sweet", "romantic"],
     sizes: [],
     colors: [],
@@ -433,7 +434,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: true,
     isPublished: true,
-    images: [IMG26],
+    images: [IMG26, IMG22, IMG13, IMG24],
     tags: ["floral", "sweet", "romantic"],
     sizes: [],
     colors: [],
@@ -465,7 +466,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: true,
     isPublished: true,
-    images: [IMG4],
+    images: [IMG4, IMG5, IMG15, IMG27],
     tags: ["floral", "sweet", "romantic"],
     sizes: [],
     colors: [],
@@ -497,7 +498,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: true,
     isPublished: true,
-    images: [IMG16],
+    images: [IMG16, IMG12, IMG3, IMG4, IMG26],
     tags: ["floral", "sweet", "romantic"],
     sizes: [],
     colors: [],
@@ -529,7 +530,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: true,
     isPublished: true,
-    images: [IMG10],
+    images: [IMG10, IMG11, IMG12, IMG13, IMG15],
     tags: ["floral", "sweet", "romantic"],
     sizes: [],
     colors: [],
@@ -593,7 +594,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: false,
     isPublished: true,
-    images: [IMG4, IMG27],
+    images: [IMG4, IMG27, IMG22, IMG13, IMG24],
     tags: ["woody", "leather", "smoky"],
     sizes: [],
     colors: [],
@@ -624,7 +625,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: false,
     isPublished: true,
-    images: [IMG22, IMG27],
+    images: [IMG22, IMG27, IMG4, IMG13, IMG24],
     tags: ["woody", "leather", "smoky"],
     sizes: [],
     colors: [],
@@ -655,7 +656,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: false,
     isPublished: true,
-    images: [IMG20, IMG21],
+    images: [IMG20, IMG21, IMG22, IMG13, IMG24],
     tags: ["woody", "leather", "smoky"],
     sizes: [],
     colors: [],
@@ -686,7 +687,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: false,
     isPublished: true,
-    images: [IMG27],
+    images: [IMG27, IMG22, IMG13, IMG24],
     tags: ["woody", "leather", "smoky"],
     sizes: [],
     colors: [],
@@ -717,7 +718,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: false,
     isPublished: true,
-    images: [IMG20, IMG21],
+    images: [IMG20, IMG21, IMG22, IMG13, IMG24],
     tags: ["woody", "leather", "smoky"],
     sizes: [],
     colors: [],
@@ -861,7 +862,7 @@ export const products: IProductInput[] = [
 
   {
     name: "Kids Gentle Foam Wash",
-    slug: toSlug("Kids Foam Wash"),
+    slug: toSlug("Kids Foam Washed"),
     category: "Kids",
     subcategory: "Bath Soap",
     description:
@@ -874,7 +875,7 @@ export const products: IProductInput[] = [
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG12],
+    images: [IMG12, IMG13, IMG16, IMG17],
     tags: ["gentle", "foam", "kids"],
     sizes: [],
     colors: [],
@@ -893,7 +894,7 @@ export const products: IProductInput[] = [
 
   {
     name: "Kids Gentle Foam Wash",
-    slug: toSlug("Kids Wash"),
+    slug: toSlug("Kids Washing"),
     category: "Kids",
     subcategory: "Bath Soap",
     description:
@@ -906,7 +907,7 @@ export const products: IProductInput[] = [
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG13],
+    images: [IMG13, IMG15, IMG16, IMG17, IMG26],
     tags: ["gentle", "foam", "kids"],
     sizes: [],
     colors: [],
@@ -938,7 +939,7 @@ export const products: IProductInput[] = [
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG15, IMG16],
+    images: [IMG15, IMG16, IMG17, IMG26],
     tags: ["gentle", "foam", "kids"],
     sizes: [],
     colors: [],
@@ -970,7 +971,7 @@ export const products: IProductInput[] = [
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG16],
+    images: [IMG16, IMG12, IMG3, IMG4, IMG26],
     tags: ["gentle", "foam", "kids"],
     sizes: [],
     colors: [],
@@ -1034,7 +1035,7 @@ export const products: IProductInput[] = [
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG1],
+    images: [IMG1, IMG26, IMG2, IMG3, IMG4],
     tags: ["gentle", "foam", "kids"],
     sizes: [],
     colors: [],
@@ -1066,7 +1067,7 @@ export const products: IProductInput[] = [
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG18],
+    images: [IMG18, IMG12, IMG3, IMG4, IMG26],
     tags: ["gentle", "foam", "kids"],
     sizes: [],
     colors: [],
@@ -1086,7 +1087,7 @@ export const products: IProductInput[] = [
   // ----- BODY CARE / SANITARY -----
   {
     name: "Nasy Liquid Bath Soap - Vanilla Cream",
-    slug: toSlug("Nasy Liquid Bath Soap - Vanilla Cream"),
+    slug: toSlug("Nasy Liquid Bath Soap - Vanilla Creamers"),
     category: "Body Care",
     subcategory: "Bath Soap",
     description:
@@ -1118,7 +1119,7 @@ export const products: IProductInput[] = [
 
   {
     name: "Nasy Liquid Bath Soap - Vanilla Cream",
-    slug: toSlug(" Liquid Bath Soap - Vanilla Cream"),
+    slug: toSlug(" Liquid Bath Soap - Vanilla Creama"),
     category: "Body Care",
     subcategory: "Bath Soap",
     description:
@@ -1131,7 +1132,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: false,
     isPublished: true,
-    images: [IMG11],
+    images: [IMG11, IMG12, IMG13, IMG15, IMG16],
     tags: ["vanilla", "shea"],
     sizes: [],
     colors: [],
@@ -1150,7 +1151,7 @@ export const products: IProductInput[] = [
 
   {
     name: "Nasy Liquid Bath Soap - Vanilla Cream",
-    slug: toSlug("Nasy  Bath Soap - Vanilla Cream"),
+    slug: toSlug("Nasy  Bath Soap - Vanilla Creamer"),
     category: "Body Care",
     subcategory: "Bath Soap",
     description:
@@ -1163,7 +1164,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: false,
     isPublished: true,
-    images: [IMG13],
+    images: [IMG13, IMG15, IMG16, IMG17, IMG26],
     tags: ["vanilla", "shea"],
     sizes: [],
     colors: [],
@@ -1182,7 +1183,7 @@ export const products: IProductInput[] = [
 
   {
     name: "Nasy Liquid Bath Soap - Vanilla Cream",
-    slug: toSlug("Nasy Liquid  Soap - Vanilla Cream"),
+    slug: toSlug("Nasy Liquid  Soap - Vanilla Creaming"),
     category: "Body Care",
     subcategory: "Bath Soap",
     description:
@@ -1195,7 +1196,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: false,
     isPublished: true,
-    images: [IMG25],
+    images: [IMG25, IMG12, IMG3, IMG4, IMG26],
     tags: ["vanilla", "shea"],
     sizes: [],
     colors: [],
@@ -1227,7 +1228,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: false,
     isPublished: true,
-    images: [IMG12],
+    images: [IMG12, IMG13, IMG16, IMG17],
     tags: ["vanilla", "shea"],
     sizes: [],
     colors: [],
@@ -1259,7 +1260,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: false,
     isPublished: true,
-    images: [IMG24],
+    images: [IMG24, IMG12, IMG13, IMG15, IMG16],
     tags: ["vanilla", "shea"],
     sizes: [],
     colors: [],
@@ -1291,7 +1292,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: false,
     isPublished: true,
-    images: [IMG20],
+    images: [IMG20, IMG21, IMG22, IMG13, IMG24],
     tags: ["vanilla", "shea"],
     sizes: [],
     colors: [],
@@ -1323,7 +1324,7 @@ export const products: IProductInput[] = [
     featured: true,
     newArrival: false,
     isPublished: true,
-    images: [IMG22],
+    images: [IMG22, IMG13, IMG24, IMG12, IMG15],
     tags: ["vanilla", "shea"],
     sizes: [],
     colors: [],
@@ -1343,7 +1344,7 @@ export const products: IProductInput[] = [
   //   Hygiene
   {
     name: "Nasy Sanitary Pad - Ultra Comfort (10pcs)",
-    slug: toSlug("Nasy Sanitary Pad - Ultra Comfort (10pcs)"),
+    slug: toSlug("Nasy Sanitary Pad - Ultra Comfort (3pcs)"),
     category: "Hygiene",
     subcategory: "Women",
     description:
@@ -1375,7 +1376,7 @@ export const products: IProductInput[] = [
 
   {
     name: "Nasy Sanitary Pad - Ultra Comfort (10pcs)",
-    slug: toSlug(" Sanitary Pad - Ultra Comfort (10pcs)"),
+    slug: toSlug(" Sanitary Pad - Ultra Comfort (1pcs)"),
     category: "Hygiene",
     subcategory: "Women",
     description:
@@ -1388,7 +1389,7 @@ export const products: IProductInput[] = [
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG16],
+    images: [IMG16, IMG12, IMG3, IMG4, IMG26],
     tags: ["sanitary", "cotton", "comfort"],
     sizes: [],
     colors: [],
@@ -1407,7 +1408,7 @@ export const products: IProductInput[] = [
 
   {
     name: "Nasy Sanitary Pad - Ultra Comfort (10pcs)",
-    slug: toSlug("Nasy  Pad - Ultra Comfort (10pcs)"),
+    slug: toSlug("Nasy  Pad - Ultra Comfort (4pcs)"),
     category: "Hygiene",
     subcategory: "Women",
     description:
@@ -1420,7 +1421,7 @@ export const products: IProductInput[] = [
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG15, IMG16],
+    images: [IMG15, IMG16, IMG17, IMG26],
     tags: ["sanitary", "cotton", "comfort"],
     sizes: [],
     colors: [],
@@ -1439,7 +1440,7 @@ export const products: IProductInput[] = [
 
   {
     name: "Nasy Sanitary Pad - Ultra Comfort (10pcs)",
-    slug: toSlug("Nasy Sanitary Padd - Ultra Comfort (10pcs)"),
+    slug: toSlug("Nasy Sanitary Padd - Ultra Comfort (110pcs)"),
     category: "Hygiene",
     subcategory: "Women",
     description:
@@ -1452,7 +1453,7 @@ export const products: IProductInput[] = [
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG23],
+    images: [IMG23, IMG12, IMG13, IMG15, IMG16],
     tags: ["sanitary", "cotton", "comfort"],
     sizes: [],
     colors: [],
@@ -1484,7 +1485,7 @@ export const products: IProductInput[] = [
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG20],
+    images: [IMG20, IMG21, IMG22, IMG13, IMG24],
     tags: ["sanitary", "cotton", "comfort"],
     sizes: [],
     colors: [],
@@ -1516,7 +1517,7 @@ export const products: IProductInput[] = [
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG24],
+    images: [IMG24, IMG12, IMG13, IMG15, IMG16],
     tags: ["sanitary", "cotton", "comfort"],
     sizes: [],
     colors: [],
@@ -1548,7 +1549,7 @@ export const products: IProductInput[] = [
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG2],
+    images: [IMG2, IMG26, IMG3, IMG4],
     tags: ["sanitary", "cotton", "comfort"],
     sizes: [],
     colors: [],
@@ -1567,7 +1568,7 @@ export const products: IProductInput[] = [
 
   {
     name: "Nasy Sanitary Pad - Ultra Comfort (10pcs)",
-    slug: toSlug("Nasy Sanitary Padd"),
+    slug: toSlug("Nasy Sanitary pad - gh"),
     category: "Hygiene",
     subcategory: "Women",
     description:
@@ -1580,7 +1581,7 @@ export const products: IProductInput[] = [
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG27],
+    images: [IMG27, IMG12, IMG3, IMG4, IMG26],
     tags: ["sanitary", "cotton", "comfort"],
     sizes: [],
     colors: [],
