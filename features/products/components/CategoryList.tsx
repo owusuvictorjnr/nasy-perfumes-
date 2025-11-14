@@ -18,10 +18,14 @@ export default function CategoryList({ products }: CategoryListProps) {
   });
   return (
     <div className="space-y-12">
+      {/* category header */}
       {Object.entries(grouped).map(([category, subcategories]) => (
         <div className="" key={category}>
-          <h2 className="text-xl font-semibold mb-2">{category}</h2>
+          <h2 className="text-xl font-semibold mb-2 uppercase bg-[#90e0ef] text-[#fefae0] py-2 rounded leading-10 md:text-2xl">
+            {category}
+          </h2>
 
+          {/* subcategory header */}
           {Object.entries(subcategories).map(([subcategory, items]) => (
             <div className="mb-6" key={subcategory}>
               <h3 className="text-lg font-medium mb-1">{subcategory}</h3>
