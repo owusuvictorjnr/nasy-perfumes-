@@ -63,7 +63,10 @@ export default function ProductCard({ product }: ProductCardProps) {
         {product.countInStock > 0 ? (
           <span className="text-green-600 font-semibold">In Stock</span>
         ) : (
-          <span className="text-red-600 font-semibold">Out of Stock</span>
+          <span className="text-red-600 font-semibold">
+            Out of Stock|{" "}
+            <span className="text-yellow-500 font-bold text-xl">Pre-Order Now</span>
+          </span>
         )}
       </p>
 
