@@ -1548,7 +1548,7 @@ export const products: IProductInput[] = [
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG27],
+    images: [IMG2],
     tags: ["sanitary", "cotton", "comfort"],
     sizes: [],
     colors: [],
@@ -1572,15 +1572,15 @@ export const products: IProductInput[] = [
     subcategory: "Women",
     description:
       "Soft cotton top layer and leak-proof design for all-day freshness.",
-    price: 35,
+    price:50,
     listPrice: 40,
-    stock: "50",
+    stock: "0",
     brand: "Nasy",
-    countInStock: 50,
+    countInStock: 0,
     featured: false,
     newArrival: true,
     isPublished: true,
-    images: [IMG25],
+    images: [IMG27],
     tags: ["sanitary", "cotton", "comfort"],
     sizes: [],
     colors: [],
@@ -1897,12 +1897,6 @@ We also provide helpful resources such as order tracking, product guides, and FA
         phone: "+1 (123) 456-7890",
       },
       carousels: [
-        // {
-        //   title: 'Most Popular Shoes',
-        //   buttonCaption: 'Shop Now',
-        //   image: '/images/jeans/jeans15.jpg',
-        //   url: '/search?category=Shoes',
-        // },
         {
           title: "Best Sellers in T-Shirts",
           buttonCaption: "Shop Now",
@@ -1937,19 +1931,19 @@ We also provide helpful resources such as order tracking, product guides, and FA
         {
           name: "Ghanaian Cedi",
           code: "GHS",
-          symbol: "GH₵",
+          symbol: "₵",
           convertRate: 12.5, // Example conversion rate (1 USD = 12.50 GHS)
         },
       ],
-      defaultCurrency: "USD",
+      defaultCurrency: "₵",
 
       availablePaymentMethods: [
-        { name: "Stripe", commission: 0 },
-        // { name: "Paystack", commission: 0 },
+        // { name: "Stripe", commission: 0 },
+        { name: "Paystack", commission: 0 },
         { name: "Cash On Delivery", commission: 0 },
         { name: "Mobile Money", commission: 0 },
       ],
-      defaultPaymentMethod: "Stripe",
+      defaultPaymentMethod: "Paystack",
       availableDeliveryDates: [
         {
           name: "Tomorrow",
