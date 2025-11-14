@@ -43,11 +43,13 @@ export function Hero() {
         <CarouselContent>
           {images.map((src, index) => (
             <CarouselItem key={index}>
-              <div className="relative w-full md:h-280 h-100  overflow-hidden rounded-none md:rounded">
+              <div className="relative w-full md:h-160 h-100  overflow-hidden rounded-none md:rounded">
                 <Image
                   src={src}
                   alt={`Perfume ${index + 1}`}
-                  className="object-cover brightness-75"
+                  // width={100}
+                  // height={400}
+                  className="object-cover brightness-50"
                   fill
                   priority={index === 0}
                 />
