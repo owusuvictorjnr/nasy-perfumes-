@@ -5,7 +5,7 @@ import ProductList from "@/app/(frontend)/shop/page";
 
 export default function Homepage() {
   return (
-    <div className="text-center h-screen w-full">
+    <div className="text-center min-h-screen w-full">
       {/* Hero Carousel */}
       <div className="">
         <Hero />
