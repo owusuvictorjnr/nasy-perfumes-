@@ -1573,7 +1573,7 @@ export const products: IProductInput[] = [
     subcategory: "Women",
     description:
       "Soft cotton top layer and leak-proof design for all-day freshness.",
-    price:50,
+    price: 50,
     listPrice: 40,
     stock: "0",
     brand: "Nasy",
@@ -1599,7 +1599,7 @@ export const products: IProductInput[] = [
   },
 ];
 
-const reviews = [
+export const reviews = [
   {
     rating: 1,
     title: "Poor quality",
