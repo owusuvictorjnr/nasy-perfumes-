@@ -17,19 +17,20 @@
 // export default function Cart() {
 //   return (
 //     <div className="flex justify-end items-center px-8 pb-2">
-      // <Image
-      //   src={SHOPPING_BAG_ICON}
-      //   alt="cart icon"
-      //   width={30}
-      //   height={30}
+// <Image
+//   src={SHOPPING_BAG_ICON}
+//   alt="cart icon"
+//   width={30}
+//   height={30}
 
-      // />
+// />
 //     </div>
 //   );
 // }
 
 import React from "react";
+import CartView from "@/features/cart/components/CartView";
 
 export default function page() {
-  return <div>page</div>;
+  return <CartView />;
 }
