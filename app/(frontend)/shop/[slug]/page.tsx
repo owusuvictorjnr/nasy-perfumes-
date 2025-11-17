@@ -1,6 +1,7 @@
-import { products } from "@/lib/data";
+import { products, reviews } from "@/lib/data";
 import { formatCurrency } from "@/lib/utils";
 import Image from "next/image";
+import ReviewsClient from "@/components/reviews/ReviewsClient";
 
 export default async function ProductPage({
   params,
@@ -11,6 +12,10 @@ export default async function ProductPage({
 
   const product = products.find((p) => p.slug === slug);
   if (!product) return <div>Product not found</div>;
+
+  // Use product-specific reviews if present, otherwise fall back to global reviews
+  const pageReviews =
+    product.reviews && product.reviews.length > 0 ? product.reviews : reviews;
 
   return (
     <div className="container mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -132,6 +137,56 @@ export default async function ProductPage({
         <button className="w-full border py-3 rounded-lg font-medium hover:bg-gray-100">
           Add to Cart
         </button>
+      </div>
+
+      {/* Description */}
+      <div className="">
+        <h1 className="text-lg font-semibold mb-2">Description</h1>
+        {product.description.split("\n").map((para, idx) => (
+          <p key={idx} className="mb-4">
+            {para}
+          </p>
+        ))}
+      </div>
+
+      <div className="">
+        <ReviewsClient reviews={pageReviews} initialCount={3} />
+      </div>
+      {/* RATING SUMMARY */}
+      <div className="mt-1">
+        <h2 className="text-xl font-bold mb-4">Ratings Summary</h2>
+
+        <div className="flex gap-10">
+          <div className="text-center">
+            <h3 className="text-5xl font-bold">
+              {product.avgRating.toFixed(1)}
+            </h3>
+            <p className="text-gray-500">out of 5</p>
+            <p className="text-sm text-gray-600 mt-2">
+              ({product.numReviews} reviews)
+            </p>
+          </div>
+
+          <div className="flex-1">
+            {product.ratingDistribution.map(({ rating, count }) => {
+              const percentage =
+                product.numReviews > 0 ? (count / product.numReviews) * 100 : 0;
+
+              return (
+                <div key={rating} className="flex items-center mb-2">
+                  <span className="w-10">{rating}★</span>
+                  <div className="flex-1 h-3 bg-gray-200 rounded-full mx-2">
+                    <div
+                      className="h-3 bg-yellow-500 rounded-full"
+                      style={{ width: `${percentage}%` }}
+                    ></div>
+                  </div>
+                  <span className="w-6 text-sm">{count}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
