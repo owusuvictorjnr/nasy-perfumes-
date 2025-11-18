@@ -22,7 +22,7 @@ export default function Login() {
 
   if (status === "loading") return <p>Loading...</p>;
   return (
-    <div className="font-medium flex justify-end items-center px-8 pb-2">
+    <div className="font-medium flex items-center h-10">
       {session ? (
         <Button onClick={() => signOut()}>Logout</Button>
       ) : (
