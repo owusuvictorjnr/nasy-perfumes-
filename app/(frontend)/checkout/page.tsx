@@ -142,7 +142,7 @@ export default function CheckoutPage() {
             </div>
           </div>
 
-          <div className="w-1/2">
+          <div className="md:w-1/2 w-full">
             <label className="block text-sm font-medium">Email</label>
             <input
               value={email}
@@ -152,7 +152,7 @@ export default function CheckoutPage() {
             />
           </div>
 
-          <div className="w-1/2">
+          <div className="md:w-1/2 w-full">
             <label className="block text-sm font-medium">Address</label>
             <input
               value={address}
