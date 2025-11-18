@@ -149,7 +149,7 @@ export default function CheckoutPage() {
               <div className="flex justify-between">
                 <span className="text-sm text-gray-700">Payment method</span>
                 <span className="text-sm text-gray-900">
-                  {paymentMethod === "card" ? "Card (Paystack)" : "Mobile money (Paystack)"}
+                  {paymentMethod === "card" ? "Card " : "Mobile money "}
                 </span>
               </div>
 
@@ -264,7 +264,9 @@ export default function CheckoutPage() {
 
           {/* Payment selection moved into the main form for mobile UX */}
           <div className="border rounded p-3 mt-4 bg-white">
-            <label className="block text-sm font-medium mb-1">Choose payment</label>
+            <label className="block text-sm font-medium mb-1">
+              Choose payment
+            </label>
             <div className="flex items-center gap-4">
               <label className="inline-flex items-center">
                 <input
@@ -293,7 +295,9 @@ export default function CheckoutPage() {
                 <h3 className="font-medium mb-2">Card details</h3>
                 <div className="space-y-2">
                   <div>
-                    <label className="block text-sm text-gray-700">Card number</label>
+                    <label className="block text-sm text-gray-700">
+                      Card number
+                    </label>
                     <input
                       inputMode="numeric"
                       value={cardNumber}
@@ -304,7 +308,9 @@ export default function CheckoutPage() {
                   </div>
                   <div className="grid grid-cols-2 gap-2">
                     <div>
-                      <label className="block text-sm text-gray-700">Expiry (MM/YY)</label>
+                      <label className="block text-sm text-gray-700">
+                        Expiry (MM/YY)
+                      </label>
                       <input
                         value={cardExpiry}
                         onChange={(e) => setCardExpiry(e.target.value)}
@@ -331,7 +337,9 @@ export default function CheckoutPage() {
               <div className="border rounded p-3 mt-3">
                 <h3 className="font-medium mb-2">Mobile money</h3>
                 <div>
-                  <label className="block text-sm text-gray-700">Mobile money number</label>
+                  <label className="block text-sm text-gray-700">
+                    Mobile money number
+                  </label>
                   <input
                     inputMode="tel"
                     value={momoNumber}
@@ -340,23 +348,21 @@ export default function CheckoutPage() {
                     className="mt-1 block w-full border rounded p-2"
                   />
                   <p className="text-xs text-gray-500 mt-1">
-                    Enter the mobile number to be charged via Paystack (Ghana mobile money).
+                    Enter the mobile number to be charged via Paystack (Ghana
+                    mobile money).
                   </p>
                 </div>
               </div>
             )}
-
           </div>
 
           {error && <div className="text-red-600">{error}</div>}
         </form>
 
-        <aside className="hidden lg:block border p-4 rounded"> 
-          {OrderSummary}
-        </aside>
+        <aside className=" lg:block border p-4 rounded">{OrderSummary}</aside>
 
         {/* Mobile / medium sidebar toggle */}
-        <div className="lg:hidden">
+        {/* <div className="lg:hidden">
           <button
             onClick={() => setShowOrderSidebar(true)}
             className="fixed bottom-4 right-4 z-50 bg-white border p-3 rounded-full shadow-lg"
@@ -364,16 +370,24 @@ export default function CheckoutPage() {
           >
             View order
           </button>
-        </div>
+        </div> */}
 
         {/* Slide-over for small/medium screens */}
         {showOrderSidebar && (
           <div className="fixed inset-0 z-50 flex">
-            <div className="absolute inset-0 bg-black/40" onClick={() => setShowOrderSidebar(false)} />
+            <div
+              className="absolute inset-0 bg-black/40"
+              onClick={() => setShowOrderSidebar(false)}
+            />
             <div className="ml-auto w-full sm:w-96 bg-white h-full p-4 overflow-auto">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-medium">Order summary</h3>
-                <button onClick={() => setShowOrderSidebar(false)} className="text-gray-600">Close</button>
+                <button
+                  onClick={() => setShowOrderSidebar(false)}
+                  className="text-gray-600"
+                >
+                  Close
+                </button>
               </div>
               {OrderSummary}
             </div>
