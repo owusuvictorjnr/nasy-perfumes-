@@ -23,13 +23,15 @@ export default function CartIcon() {
   const items = useCartContext((s) => s.items);
   const count = items?.length ?? 0;
   return (
-    <Link href="/cart" className="relative">
-      <span className="font-medium flex justify-end items-center px-8 pb-2">
-        <Image src={SHOPPING_BAG_ICON} alt="cart icon" width={30} height={30} />
-      </span>
+    <Link
+      href="/cart"
+      className="relative inline-flex items-center justify-center w-10 h-10"
+      aria-label="View cart"
+    >
+      <Image src={SHOPPING_BAG_ICON} alt="cart icon" width={28} height={28} />
 
       {count > 0 && (
-        <span className="absolute top-2  right-9 bg-red-600 text-white text-xs rounded-full px-2 py-0.5">
+        <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs rounded-full px-2 py-0.5 shadow">
           {count}
         </span>
       )}
