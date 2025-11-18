@@ -33,25 +33,62 @@ export default function CheckoutSuccess() {
         Order ID: <span className="font-mono">{order.id}</span>
       </p>
 
-      <div className="border p-4 rounded mb-4">
-        <h2 className="font-semibold mb-2">Shipping</h2>
+      <div className="border p-4 rounded mb-4 space-y-2">
+        <h2 className="font-semibold mb-2">Delivery Information</h2>
         <div>
-          {order.customer.firstName}{" "}
-          {order.customer.middleName ? order.customer.middleName + " " : ""}
-          {order.customer.lastName}
+          <h1 className="font-medium">
+            First Name:{" "}
+            <span className="font-normal">{order.customer.firstName} </span>
+          </h1>
+
+          <h1 className="font-medium">
+            Middle Name:{" "}
+            <span className="font-normal">{order.customer.middleName} </span>
+          </h1>
+
+          <h1 className="font-medium">
+            Last Name:{" "}
+            <span className="font-normal">{order.customer.lastName}</span>
+          </h1>
         </div>
-        <div>{order.customer.email}</div>
-        <div>{order.customer.address}</div>
+
         <div>
-          {order.customer.city} {order.customer.postal}
+          <h1 className="font-medium">
+            Email: <span className="font-normal">{order.customer.email}</span>
+          </h1>
         </div>
-        <div>GPS: {order.customer.gpsAddress}</div>
-        <div>{order.customer.phone}</div>
+
+        <div>
+          <h1 className="font-medium">
+            Address:{" "}
+            <span className="font-normal">{order.customer.address}</span>
+          </h1>
+        </div>
+
+        <div>
+          <h1 className="font-medium">
+            City: <span className="font-normal">{order.customer.city}</span>
+          </h1>
+          <h1 className="font-medium">
+            Postal Code:{" "}
+            <span className="font-normal">{order.customer.postal}</span>
+          </h1>
+        </div>
+
+        <div>
+          <h1 className="font-medium">
+            GPS:{" "}
+            <span className="font-normal">{order.customer.gpsAddress}</span>
+          </h1>
+          <h1 className="font-medium">
+            Phone: <span className="font-normal">{order.customer.phone}</span>
+          </h1>
+        </div>
       </div>
 
       <div className="border p-4 rounded mb-4">
         <h2 className="font-semibold mb-2">Payment</h2>
-        <div>Provider: {order.payment?.provider ?? "paystack"}</div>
+        {/* <div>Provider: {order.payment?.provider ?? "paystack"}</div> */}
         <div>
           Method: {order.payment?.method ?? order.paymentMethod ?? "card"}
         </div>
@@ -64,6 +101,8 @@ export default function CheckoutSuccess() {
           <div key={it.clientId} className="flex items-center gap-3 mb-2">
             <Image
               src={it.image}
+              height={500}
+              width={500}
               alt={it.name}
               className="w-16 h-16 object-cover rounded"
             />
