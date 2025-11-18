@@ -19,7 +19,7 @@ import Search from "@/app/(frontend)/shared/components/main-header/Search";
 import Sidebar from "@/app/(frontend)/shared/components/main-header/Sidebar";
 import Login from "@/features/auth/components/Login/page";
 import CartIcon from "@/features/cart/components/CartIcon";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Header() {
   const [showMobileNav, setShowMobileNav] = useState(false);
@@ -57,18 +57,18 @@ export default function Header() {
         </div>
 
         {/* center: search on small screens as icon only */}
-        <div className="md:hidden">
+        <div className="md:hidden flex-1 flex justify-center px-4">
           <Search />
         </div>
 
         {/* right: login & cart - on small screens keep them visible in top-right */}
-        <div className="flex items-center space-x-3">
-          <div className="order-2 md:order-0">
+        <div className="flex items-center ">
+          <span className="order-2 md:order-0">
             <Login />
-          </div>
-          <div className="order-3 md:order-0">
+          </span>
+          <span className="order-3 md:order-0">
             <CartIcon />
-          </div>
+          </span>
         </div>
       </div>
 
