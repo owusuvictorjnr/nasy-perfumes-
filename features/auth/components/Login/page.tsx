@@ -24,7 +24,7 @@ export default function Login() {
   return (
     <div className="font-medium flex justify-end items-center px-8 pb-2">
       {session ? (
-        <Button onClick={() => signOut}>Logout</Button>
+        <Button onClick={() => signOut()}>Logout</Button>
       ) : (
         <Button onClick={() => signIn("google")}>Login</Button>
       )}
