@@ -111,9 +111,9 @@ export default function CheckoutPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold mb-6">Checkout</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <form onSubmit={onSubmit} className="lg:col-span-2 space-y-4">
-          <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <form onSubmit={onSubmit} className="lg:col-span-2 space-y-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             <div>
               <label className="block text-sm font-medium">First name</label>
               <input
@@ -142,7 +142,7 @@ export default function CheckoutPage() {
             </div>
           </div>
 
-          <div>
+          <div className="w-1/2">
             <label className="block text-sm font-medium">Email</label>
             <input
               value={email}
@@ -152,7 +152,7 @@ export default function CheckoutPage() {
             />
           </div>
 
-          <div>
+          <div className="w-1/2">
             <label className="block text-sm font-medium">Address</label>
             <input
               value={address}
@@ -161,7 +161,7 @@ export default function CheckoutPage() {
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium">City</label>
               <input
@@ -180,7 +180,7 @@ export default function CheckoutPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
             <div>
               <label className="block text-sm font-medium">
                 GPS address (e.g. GS-xxx-xxx)
@@ -252,17 +252,15 @@ export default function CheckoutPage() {
                       Payment method
                     </span>
                     <span className="text-sm text-gray-900">
-                      {paymentMethod === "card"
-                        ? "Bank Card "
-                        : "Mobile money"}
+                      {paymentMethod === "card" ? "Bank Card " : "Mobile money"}
                     </span>
                   </div>
 
-                  <div>
+                  <div className="flex flex-col items-center justify-center w-full">
                     <label className="block text-sm font-medium mb-1">
                       Choose payment
                     </label>
-                    <div className="flex items-center gap-62">
+                    <div className="md:flex md:items-center md:gap-62 grid grid-cols-1 space-y-5">
                       <label className="inline-flex items-center">
                         <input
                           type="radio"
