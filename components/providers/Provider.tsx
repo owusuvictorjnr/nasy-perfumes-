@@ -16,6 +16,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { SessionProvider } from "next-auth/react";
 import React from "react";
+import { ToastProvider } from "@/components/ui/Toast";
 
 const queryClient = new QueryClient();
 
@@ -24,7 +25,7 @@ export default function Provider({ children }: { children: React.ReactNode }) {
     <div>
       <SessionProvider>
         <QueryClientProvider client={queryClient}>
-          {children}
+          <ToastProvider>{children}</ToastProvider>
         </QueryClientProvider>
       </SessionProvider>
     </div>
