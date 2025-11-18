@@ -33,7 +33,7 @@ export default function Search() {
           className="bg--500 "
         />
       </div> */}
-      <div className="relative  w-full max-w-md">
+      <div className="relative w-full max-w-xs md:max-w-md">
         <Input
           type="text"
           value={query}
