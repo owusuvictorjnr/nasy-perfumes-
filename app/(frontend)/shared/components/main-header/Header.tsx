@@ -81,10 +81,10 @@ export default function Header() {
       {showMobileNav && (
         <div className="fixed inset-0 z-50 flex">
           <div
-            className="absolute inset-0 bg-black/40"
+            className="absolute inset-0 bg-black/40 z-10"
             onClick={() => setShowMobileNav(false)}
           />
-          <div className="ml-0 w-72 bg-white h-full p-4 overflow-auto">
+          <div className="ml-0 w-72 bg-white h-full p-4 overflow-auto z-50">
             <div className="flex items-center justify-between mb-4">
               <div className="font-bold">Menu</div>
               <button
