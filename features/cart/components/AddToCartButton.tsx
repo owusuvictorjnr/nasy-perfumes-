@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { IProductInput } from "@/types";
 import { useCartContext } from "@/features/cart/context/CartProvider";
 import { useToast } from "@/components/ui/Toast";
+import { Button } from "@/components/ui/button";
 
 export default function AddToCartButton({
   product,
@@ -94,13 +95,14 @@ export default function AddToCartButton({
         />
       </div>
 
-      <button
+      <Button
+      variant={"link"}
         type="button"
         onClick={onAdd}
         className="w-full border py-3 rounded-lg font-medium hover:bg-gray-100"
       >
         Add to Cart
-      </button>
+      </Button>
     </div>
   );
 }
