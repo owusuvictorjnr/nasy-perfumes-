@@ -11,44 +11,42 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-'use client';
+"use client";
 
 import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="hidden md:block">
-      <nav className="">
-        <ul className="flex space-x-8 justify-center items-center py-2 uppercase font-medium">
-          <Link href={"/"}>
-            <li className="hover:text-blue-400">home</li>
-          </Link>
-          <Link href={"/fine-fragrances"}>
-            <li className="hover:text-blue-400">fine fragrances</li>
-          </Link>
-          <Link href={"/body-hair-face"}>
-            <li className="hover:text-blue-400">body-hair-face</li>
-          </Link>
-          <Link href={"/grooming"}>
-            <li className="hover:text-blue-400">grooming</li>
-          </Link>
-          <Link href={"/home-creations"}>
-            <li className="hover:text-blue-400">home creations</li>
-          </Link>
-          <Link href={"/gifts"}>
-            <li className="hover:text-blue-400">gift</li>
-          </Link>
-          <Link href={"/samples"}>
-            <li className="hover:text-blue-400">samples</li>
-          </Link>
-          <Link href={"/about-us"}>
-            <li className="hover:text-blue-400">About Us</li>
-          </Link>
-          <Link href={"/contact-us"}>
-            <li className="hover:text-blue-400">Contact</li>
-          </Link>
-        </ul>
-      </nav>
-    </div>
+    <nav className="">
+      <ul className="flex flex-col md:flex-row md:space-x-8 justify-center items-start md:items-center py-4 md:py-2 uppercase font-medium">
+        <li className="px-4 py-2 md:p-0 hover:text-blue-400">
+          <Link href="/">home</Link>
+        </li>
+        <li className="px-4 py-2 md:p-0 hover:text-blue-400">
+          <Link href="/fine-fragrances">fine fragrances</Link>
+        </li>
+        <li className="px-4 py-2 md:p-0 hover:text-blue-400">
+          <Link href="/body-hair-face">body-hair-face</Link>
+        </li>
+        <li className="px-4 py-2 md:p-0 hover:text-blue-400">
+          <Link href="/grooming">grooming</Link>
+        </li>
+        <li className="px-4 py-2 md:p-0 hover:text-blue-400">
+          <Link href="/home-creations">home creations</Link>
+        </li>
+        <li className="px-4 py-2 md:p-0 hover:text-blue-400">
+          <Link href="/gifts">gift</Link>
+        </li>
+        <li className="px-4 py-2 md:p-0 hover:text-blue-400">
+          <Link href="/samples">samples</Link>
+        </li>
+        <li className="px-4 py-2 md:p-0 hover:text-blue-400">
+          <Link href="/about-us">About Us</Link>
+        </li>
+        <li className="px-4 py-2 md:p-0 hover:text-blue-400">
+          <Link href="/contact-us">Contact</Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
