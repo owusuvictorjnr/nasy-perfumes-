@@ -16,6 +16,7 @@
 
 import Navbar from "@/app/(frontend)/shared/components/main-header/Navbar";
 import Search from "@/app/(frontend)/shared/components/main-header/Search";
+import Sidebar from "@/app/(frontend)/shared/components/main-header/Sidebar";
 import Login from "@/features/auth/components/Login/page";
 import CartIcon from "@/features/cart/components/CartIcon";
 import React, { useState } from "react";
@@ -88,17 +89,13 @@ export default function Header() {
               <div className="font-bold">Menu</div>
               <button
                 onClick={() => setShowMobileNav(false)}
-                className="text-gray-600"
+                className="text-gray-600 rounded-full w-6  h-6 flex items-center justify-center"
               >
-                Close
+                x
               </button>
             </div>
-            <Navbar />
-            <div className="mt-6 border-t pt-4">
-              <Login />
-              <div className="mt-3">
-                <CartIcon />
-              </div>
+            <div className="">
+              <Sidebar />
             </div>
           </div>
         </div>
